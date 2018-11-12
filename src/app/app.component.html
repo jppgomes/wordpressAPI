@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Posts ubiplace
+  </h1>
+  <p>Filtrar pelo titulo</p>
+  <input type="text" name="filtro" [(ngModel)]="filtro">
+  <button (keyup.ente)="getPosts()" (click)="getPosts()">Pesquisar</button>
+  <p>{{filtro}}</p>
+  <ul *ngIf="posts">
+    <li *ngFor="let post of posts">
+      <a href="{{post.link}}" target="_blank>">{{post.title.rendered}}</a>
+      <p>Tags: {{post.tags}}</p>
+    </li>
+  </ul>
+</div>
+
+
